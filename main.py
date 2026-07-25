@@ -67,9 +67,9 @@ label2 = Label(text="current time:", bg="#f5badf")
 label3 = Label(text="%", bg="#f5badf")
 label4 = Label(text="°C", bg="#f5badf")
 
-val_temp = Label(root, text="27", bg="#ffabe0")
-val_hum = Label(root, text="78", bg="#ffabe0")
-val_time = Label(root, text="17:44", bg="#ffabe0")
+val_temp = Label(root, text="--", bg="#c8cbcc")
+val_hum = Label(root, text="--", bg="#c8cbcc")
+val_time = Label(root, text="--:--", bg="#c8cbcc")
 
 #Размещение полученных значений
 label.grid(row=0, column=0, sticky="w", padx=(60, 5), pady=15)  #temperature
