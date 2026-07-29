@@ -2,7 +2,6 @@ from tkinter import *
 from PIL import Image, ImageTk, ImageSequence
 import pyglet
 import tkinter.font as tkfont
-#Настройка окна
 root = Tk()
 root.title("Iot-monitoring")
 root.geometry("650x250")
@@ -15,7 +14,7 @@ pyglet.font.add_file('assets/path/Akedoakushon-Regular.otf')
 default_font = tkfont.nametofont("TkDefaultFont")
 default_font.configure(family="Akedoakushon-Regular", size=25)
 
-#Размещение Gif
+#Gif
 frames1, frames2, frames3, frames4, frames5 = [], [], [], [], []
 try:
     with Image.open("assets/cat.gif") as gif:
@@ -68,7 +67,7 @@ if frames5:
     gif_label5 = Label(root, bg='#f5badf')
     gif_label5.place(x=300, y=199)
     root.after(0, update_gif, 0, frames5, gif_label5)
-#Текст
+
 label = Label(text="temperature", bg="#f5badf")
 label1 = Label(text="humidity", bg="#f5badf")
 label2 = Label(text="current time:", bg="#f5badf")
@@ -79,7 +78,6 @@ val_temp = Label(root, text="--", bg="#c8cbcc")
 val_hum = Label(root, text="--", bg="#c8cbcc")
 val_time = Label(root, text="--:--", bg="#c8cbcc")
 
-#Размещение полученных значений
 label.grid(row=0, column=0, sticky="w", padx=(60, 5), pady=15)  #temperature
 label1.grid(row=1, column=0, sticky="w", padx=(60, 5), pady=15) #humidity
 label2.grid(row=2, column=0, sticky="w", padx=(60, 5), pady=15) #time
